@@ -1,0 +1,19 @@
+{
+    "name": "gabrielvicente/projeto-pi",
+    "description": "Projeto que irei entregar para a PI",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app//"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Meronha Vicente",
+            "email": "gabriel.vicente6@fatec.sp.gov.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
