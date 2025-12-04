@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NãoSei Lanches - Hamburgueres Artesanais</title>
+    <title>Mestre da Brasa - Hamburgueres Artesanais</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -149,7 +149,7 @@
                 <div class="card border-0 shadow-sm">
                     <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Hambúrguer">
                     <div class="card-body">
-                        <h5 class="card-title">Não sei</h5>
+                        <h5 class="card-title">Basicão Top</h5>
                         <p class="card-text text-white">Pão, carne, queijo, alface e molho especial</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="fw-bold text-danger">R$ 24,90</span>
@@ -162,7 +162,7 @@
                 <div class="card border-0 shadow-sm">
                     <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Hambúrguer">
                     <div class="card-body">
-                        <h5 class="card-title">Cê que sabe</h5>
+                        <h5 class="card-title">Caramelo da Grove Street</h5>
                         <p class="card-text text-white">Pão, carne, queijo, bacon crocante e cebola caramelizada</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="fw-bold text-danger">R$ 29,90</span>
@@ -175,7 +175,7 @@
                 <div class="card border-0 shadow-sm">
                     <img src="https://images.unsplash.com/photo-1603064752734-4c48eff53d05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Hambúrguer">
                     <div class="card-body">
-                        <h5 class="card-title">Sei lá</h5>
+                        <h5 class="card-title">Duplo Twist Carpado</h5>
                         <p class="card-text text-white">Dois hambúrgueres, queijo, picles e molho especial</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="fw-bold text-danger">R$ 34,90</span>

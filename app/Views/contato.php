@@ -29,7 +29,7 @@
 
                     <div class="mt-4 text-center">
                         <p class="text-secondary mb-2 text-white">Ou entre em contato por:</p>
-                        <p class="mb-1 text-white"><span class="text-danger">E-mail:</span> suporte@naoseilanches.com</p>
+                        <p class="mb-1 text-white"><span class="text-danger">E-mail:</span> suporte@mestredabrasa.com</p>
                         <p class="text-white"><span class="text-danger">WhatsApp:</span> (11) 98765-4321</p>
                     </div>
                 </div>
