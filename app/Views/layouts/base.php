@@ -135,15 +135,22 @@
         @media print {
             .btn, .d-flex, nav, header, footer { display: none !important; }
         }
+
+
+
+        
+        
+        
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="/img/logo_sem_fundo.png" width="43" height="55" alt="Logo Mestre da Brasa" class="d-inline-block align-text-top">
-            </a>
+            <a class="navbar-brand d-flex align-items-center" href="/">
+    <img src="/img/logo_sem_fundo.png" width="43" height="55" alt="Logo Mestre da Brasa" class="d-inline-block align-text-top">
+    <span class="ms-2 fw-bold" style="color: #ff9800;">Mestre da Brasa</span>
+</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>

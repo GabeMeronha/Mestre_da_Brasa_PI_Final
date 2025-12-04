@@ -62,13 +62,13 @@ $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 // Se for a página inicial "/"
 if ($url == "/") {
-    render('home.php', ['title' => 'Home NSeiLanches']);
+    render('home.php', ['title' => 'Home MestredaBrasa']);
 
 } else if ($url == '/sobre') {
-    render('sobre.php', ['title' => 'Sobre NSeiLanches']);
+    render('sobre.php', ['title' => 'Sobre MestredaBrasa']);
 
 } else if ($url == '/contato') {
-    render('contato.php', ['title' => 'Contato NSeiLanches']);
+    render('contato.php', ['title' => 'Contato MestredaBrasa']);
 
 // Se tentou entrar no sistema (clicou no botão "Logar")
 } else if ($url == '/login' && $_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -76,7 +76,7 @@ if ($url == "/") {
 
 // Se só acessou a tela de login
 } else if ($url == '/login') {
-    render_sem_login('auth/login.php', ['title' => 'Login NSeiLanches']);
+    render_sem_login('auth/login.php', ['title' => 'Login MestredaBrasa']);
 
 } else if ($url == '/logout') {
     $authCtrl->logout(); // Sai da conta
@@ -95,7 +95,7 @@ if ($url == "/") {
     $produtosRecentes = \App\Models\Produto::buscarProdutosRecentes();
 
     render_dashboard('dashboard.php', [
-        'title' => 'Dashboard NSeiLanches',
+        'title' => 'Dashboard MestredaBrasa',
         'clientesRecentes' => $clientesRecentes,
         'vendasRecentes' => $vendasRecentes,
         'produtosRecentes' => $produtosRecentes
@@ -103,7 +103,7 @@ if ($url == "/") {
 
 // Rotas de Usuários
 } else if ($url == "/usuarios/novo") {
-    render('usuarios/cadastro-usuarios.php', ['title' => 'Cadastro NSeiLanches']);
+    render('usuarios/cadastro-usuarios.php', ['title' => 'Cadastro MestredaBrasa']);
 
 } else if ($url == "/usuarios/registrar") {
     $usuarioCtrl->novo();

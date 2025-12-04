@@ -19,7 +19,7 @@ class UsuarioController
         $usuarios = Usuario::buscarTodos();
 
 
-        render("usuarios/listagem-usuarios.php", ['title' => 'Usuários - NãoSeiLanches', "usuarios" => $usuarios]);
+        render("usuarios/listagem-usuarios.php", ['title' => 'Usuários - MestredaBrasa', "usuarios" => $usuarios]);
     }
 
     // exibe a lista de clientes
@@ -30,14 +30,14 @@ class UsuarioController
         $clientes = array_filter($todos, function ($u) {
             return isset($u['tipo']) && $u['tipo'] === 'Cliente';
         });
-        render("usuarios/clientes.php", ['title' => 'Clientes - NãoSeiLanches', "clientes" => $clientes]);
+        render("usuarios/clientes.php", ['title' => 'Clientes - MestredaBrasa', "clientes" => $clientes]);
     }
 
     // Abre o formulario para criar um usuario
     public function novo()
     {
         render('usuarios/cadastro-usuarios.php', [
-            'title' => 'Registrar Usuário - NãoSeiLanches',
+            'title' => 'Registrar Usuário - MestredaBrasa',
             'acao_botao' => 'Criar'
         ]);
     }
