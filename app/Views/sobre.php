@@ -40,12 +40,12 @@
 <section class="container text-light my-5">
     <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-            <h2 class="text-warning mb-4">Como nasceu a Não Sei Lanche</h2>
+            <h2 class="text-warning mb-4">Como nasceu a Mestre da Brasa</h2>
             <p>
-                Tudo começou em uma noite comum, quando um grupo de amigos se reuniu e ninguém sabia o que pedir. A frase mais falada foi: <strong>"Não sei, escolhe você!"</strong> — e assim nasceu a ideia de criar um lugar onde a indecisão vira sabor.
+                Tudo começou em uma noite comum, quando um grupo de amigos se reuniu e ninguém sabia a maestria da brasa. A frase mais falada foi: <strong>"Quem sabe grelhar?!"</strong> — e assim nasceu a ideia de criar um lugar onde a maestria vira sabor.
             </p>
             <p>
-                A <em>Não Sei Lanche</em> surgiu para oferecer hambúrgueres deliciosos, com combinações surpreendentes para quem não quer perder tempo escolhendo, mas nunca abre mão de comer bem.
+                A <em>Mestre da Brasa</em> surgiu para oferecer hambúrgueres deliciosos, com combinações surpreendentes para quem não quer perder tempo escolhendo, mas nunca abre mão de comer bem.
             </p>
         </div>
     </div>
@@ -58,7 +58,7 @@
             <div class="card bg-dark text-white border-0 shadow">
                 <img src="img/one.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Tanto Faz">
                 <div class="card-body">
-                    <h5 class="card-title">Tanto Faz Burger</h5>
+                    <h5 class="card-title">Cheddar Bacon Double</h5>
                     <p class="card-text">Hambúrguer artesanal com cheddar duplo, bacon crocante e molho da casa.</p>
                     <a href="#" class="btn btn-warning">R$ 32,00</a>
                 </div>

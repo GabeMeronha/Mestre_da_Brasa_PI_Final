@@ -1,6 +1,5 @@
 <?php
 // Removido o redirecionamento automático para a dashboard
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR" data-bs-theme="dark">
@@ -8,62 +7,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="icon" href="img/imglogo.webp" type="image/x-icon">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Login - Mestre da Brasa</title>
+    <link rel="icon" href="/img/imglogo.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            background-color: #121212;
+            background-image: radial-gradient(circle at center, #1f1f1f 0%, #000000 100%);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-card img {
+            filter: drop-shadow(0 0 8px rgba(255, 152, 0, 0.6));
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            background-color: #2c2c2c !important;
+            border: 1px solid #444 !important;
+            color: #fff !important;
+            height: 50px;
+        }
+
+        .form-control:focus {
+            border-color: #ff9800 !important;
+            box-shadow: 0 0 0 0.25rem rgba(255, 152, 0, 0.25) !important;
+        }
+
+        .form-floating label {
+            color: #aaa;
+        }
+
+        .btn-primary {
+            background-color: #ff9800;
+            border: none;
+            font-weight: 600;
+            color: #000;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #e68900;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(230, 137, 0, 0.4);
+        }
+
+        a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #e68900;
+        }
+    </style>
 </head>
 
-<body class="d-flex align-items-center bg-body-tertiary py-5">
-    <main class="w-100 m-auto form-container">
-        <div class="login-container">
-            <?php
-            if (isset($_SESSION['erros'])) {
-                $erros = $_SESSION['erros'];
-            ?>
-                <div class="alert alert-danger" role="alert">
-                    <h4 class="alert-heading">Erro ao Entrar!</h4>
-                    <p>Verifique os itens abaixo em seu formulário antes de tentar novamente!</p>
-                    <ul>
+<body>
+    <main class="login-card">
+        <?php if (isset($_SESSION['erros'])): $erros = $_SESSION['erros']; ?>
+            <div class="alert alert-danger text-start" role="alert">
+                <small>
+                    <ul class="mb-0 ps-3">
                         <?php foreach ($erros as $e): ?>
                             <li><?= $e ?></li>
                         <?php endforeach; ?>
                     </ul>
-                </div>
-            <?php
-                unset($_SESSION['erros']);
-            }   ?>
-            <img src="img/imglogo.webp" class="mb-4" height="62" width="75" alt="Ícone de hambúrguer">
+                </small>
+            </div>
+            <?php unset($_SESSION['erros']); ?>
+        <?php endif; ?>
 
-            <h1 class="h3 fw-normal">Faça seu Login</h1>
+        <img src="/img/imglogo.webp" height="80" alt="Logo">
 
-            <form action="/login" method="POST">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail">
-                    <label for="email">E-mail</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
-                    <label for="senha">Senha</label>
-                </div>
-                <div class="form-check text-start my-3">
-                    <input type="checkbox" class="form-check-input" id="flexCheckDefault">
-                    <label for="flexCheckDefault">Lembrar Sempre</label>
-                </div>
-                <div class="buttondashboard">
-                    <button type="submit" class="btn btn-primary w-100 py-2 btn-lg">Logar</button>
-                </div>
-            </form>
+        <h1 class="h4 mb-4 fw-bold">Acesse sua Conta</h1>
 
-            <p class="mt-3">Não tem conta? <a href="/usuarios/novo">Cadastre-se</a> agora!</p>
+        <form action="/login" method="POST">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com">
+                <label for="email">E-mail</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+                <label for="senha">Senha</label>
+            </div>
+            
+            <div class="form-check text-start my-3">
+                <input type="checkbox" class="form-check-input" id="flexCheckDefault">
+                <label class="form-check-label text-secondary" for="flexCheckDefault">Lembrar de mim</label>
+            </div>
 
-        </div>
-
+            <button type="submit" class="btn btn-primary w-100 py-3 mb-3">ENTRAR</button>
+            
+            <p class="text-secondary small">Não tem conta? <a href="/usuarios/novo">Cadastre-se</a></p>
+        </form>
     </main>
 </body>
 
-<footer class="bg-dark text-light text-center py-3 position-absolute bottom-0 w-100">
+<footer class="fixed-bottom text-center py-3 text-secondary small bg-dark">
     © 2025 Pedro Prado e Gabriel Meronha
 </footer>
 

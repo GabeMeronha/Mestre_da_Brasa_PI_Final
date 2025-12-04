@@ -8,38 +8,107 @@
     <title>Dashboard - Mestre da Brasa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
         body {
-            background-color: rgb(22, 22, 22);
-            color: white;
+            background-color: #121212;
+            background-image: radial-gradient(circle at top right, #1f1f1f 0%, #121212 100%);
+            color: #e0e0e0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            font-family: 'Poppins', sans-serif;
         }
 
+        /* Navbar customizada */
+        .navbar {
+            background-color: #1a1a1a !important;
+            border-bottom: 1px solid #333;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilização dos Cards */
         .card {
-            border-radius: 10px;
+            background-color: #1e1e1e !important; /* Força cor escura */
+            border: 1px solid #333;
+            border-radius: 16px;
             min-height: 300px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
         }
 
-        .logo {
-            max-width: 120px;
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            border-color: #ff4d4d; /* Cor de destaque ao passar o mouse */
         }
 
         .card-body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            padding: 2rem;
+        }
+
+        .card-title {
+            color: #ff9800; /* Laranja Brasa */
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
         }
 
         .card-content {
             flex-grow: 1;
         }
 
-        .list-group-item {
-            background-color: transparent;
+        /* Tabela dentro dos cards */
+        .table {
+            --bs-table-bg: transparent;
+            --bs-table-color: #ccc;
+            border-color: #444;
+        }
+        
+        /* Botões */
+        .btn-light {
+            background-color: #ff9800;
             border: none;
-            color: inherit;
-            padding: 8px 0;
+            color: #121212;
+            font-weight: 700;
+            border-radius: 8px;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .btn-light:hover {
+            background-color: #e68900;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+        }
+
+        /* Ajustes específicos para sobrescrever as cores de fundo do bootstrap nas classes bg-warning/secondary */
+        .bg-dark, .bg-secondary, .bg-warning {
+            background-color: #1e1e1e !important;
+            color: #fff !important;
+        }
+        
+        /* Tabela específica do card de produtos (que era warning) */
+        .table-warning {
+            --bs-table-bg: rgba(255, 193, 7, 0.1);
+            --bs-table-color: #ffca2c;
+            --bs-table-border-color: #664d03;
+        }
+
+        .logo {
+            max-width: 120px;
+        }
+
+        footer {
+            background-color: #1a1a1a !important;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
@@ -108,8 +177,8 @@
             </div>
             <?php unset($_SESSION['mensagem_sucesso']); ?>
         <?php endif; ?>
-        <div class="d-flex justify-content-center align-items-center">
-            <h2 class="text-light">Dashboard - Não Sei Lanches</h2>
+        <div class="d-flex justify-content-center align-items-center mb-5">
+            <h2 class="text-light fw-bold" style="text-shadow: 0 0 10px rgba(255,69,0,0.5);">Dashboard - Mestre da Brasa</h2>
         </div>
 
         <div class="row mt-4">
